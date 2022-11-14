@@ -1,21 +1,19 @@
 import { lazy, Suspense } from "react";
-const Header = lazy(() => import("./components/header"));
-const Hero = lazy(() => import("./components/hero"));
-const Footer = lazy(() => import("./components/footer"));
-const Services = lazy(() => import("./components/services"));
-const About = lazy(() => import("./components/about"));
-const WhyUs = lazy(() => import("./components/whyUs"));
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Error from "./components/error";
+import Loading from "./components/loading";
+const Home = lazy(() => import("./components/home"));
 
 function App() {
     return (
-        <Suspense fallback={<p>Loading ...</p>}>
+        <Suspense fallback={<Loading />}>
             <main className="root">
-                <Header />
-                <Hero />
-                <About />
-                <WhyUs />
-                <Services />
-                <Footer />
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="*" element={<Error />} />
+                    </Routes>
+                </BrowserRouter>
             </main>
         </Suspense>
     );
