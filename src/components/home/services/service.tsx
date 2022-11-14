@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { ServiceListProps } from "../../types";
+import { ServiceListProps } from "../../../types";
 interface ServiceProps {
     service: ServiceListProps;
 }

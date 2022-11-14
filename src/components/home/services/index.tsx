@@ -1,5 +1,5 @@
 import Carousel from "react-material-ui-carousel";
-import { breakPoints, serviceList } from "../../utils/serviceList";
+import { breakPoints, serviceList } from "../../../utils/serviceList";
 import Service from "./service";
 
 const Services = () => {

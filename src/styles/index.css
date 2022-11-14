@@ -64,4 +64,16 @@ html {
     .whyus_content {
         @apply lg:bg-whyus-gradient-opaque;
     }
+    .rotation {
+        animation: rotation-animation 800ms linear infinite;
+    }
+}
+
+@keyframes rotation-animation {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
 }
