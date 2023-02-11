@@ -8,7 +8,7 @@ const Service = ({ service }: ServiceProps) => {
     // eslint-disable-next-line
     const { category, desc, link, idx, icon } = service;
     return (
-        <article className="bg-[rgba(255,255,255,0.2)] backdrop-blur-2xl text-cyan-300 flex flex-col p-8 items-center justify-center gap-4 rounded-md max-w-[21rem] w-full shadow-sm transition-shadow duration-300 hover:shadow-2xl mx-auto">
+        <article className="bg-blur text-cyan-300 flex flex-col p-8 items-center justify-center gap-4 rounded-md max-w-[21rem] w-full shadow-sm transition-shadow duration-300 hover:shadow-2xl mx-auto">
             {icon}
             <h3 className="text-center">{category}</h3>
             <p className="text-center text-white">{desc}</p>

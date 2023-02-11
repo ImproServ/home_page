@@ -67,6 +67,20 @@ html {
     .rotation {
         animation: rotation-animation 800ms linear infinite;
     }
+    .bg-blur {
+        position: relative;
+        isolation: isolate;
+    }
+    .bg-blur::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        filter: blur(1px);
+        -webkit-filter: blur(1px);
+        background-color: rgba(255, 255, 255, 0.2);
+        background-image: linear-gradient(rgba(104, 104, 104, 0.2), rgba(133, 133, 133, 0.2));
+    }
 }
 
 @keyframes rotation-animation {
